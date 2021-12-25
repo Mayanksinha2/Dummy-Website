@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+       .container{
+           display: flex;
+       }
+       .card{
+           padding: 23px 12px;
+           margin: 23px 12px;
+           /* border: 2px dashed red; */
+           background-color: rosybrown;
+           /* box-shadow: offset-x offset-y color;It will act outside the box */
+           /* box-shadow: -34px -65px yellow; */
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+           /* box-shadow: 34px 65px 15px yellow; */
+           box-shadow: inset 12px 25px  yellow, 12px 15px red;
+       }
+       .card h2{
+           text-shadow: 2px 3px greenyellow;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is c++ course</h2>
+            <p> I have started c++ course which doesn't mean that we will stop this course. We will continue this course to complete .Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda libero temporibus excepturi. Adipisci labore, quasi ipsum ab voluptas tenetur, ratione nisi iusto hic doloremque, minus aspernatur? Unde est porro explicabo?</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is HTML course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius atque, consequuntur at tempore explicabo nihil quam expedita eum vero animi ex accusantium provident a nobis ea porro totam harum et!</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>card3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos impedit explicabo quis deserunt alias deleniti tempora ducimus culpa, dicta vel, quasi fugit iusto dolorem iure provident dolorum. Tenetur, voluptates eaque?</p>
+        </div>
+    </div>
+</body>
+</html>

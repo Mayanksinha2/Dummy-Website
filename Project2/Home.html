@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" herf="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaGiO MaStI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="php.backend">
+    <style>
+        /* body{
+            background-color:rgb(240, 192, 199);
+        } */
+        .header{
+            text-align: right;
+            color: purple;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: bolder;
+            background-color: rgb(240, 192, 199);
+            height: 90px;
+            border-radius: 20px;
+            padding-right: 20px; 
+            margin-right: 5px; 
+        }
+        .navbar{
+            background-color: rgb(158, 227, 236);
+            border-radius: 10px;
+        }
+        .navbar li{
+            display: inline-flex;
+            list-style: none;
+            font-size: 20px;
+        }
+        .navbar li a{
+            color: white;
+            text-decoration: none;
+            padding:  10px;
+            font-style: italic;
+            font-weight: bold;
+        }
+        .navbar li a:hover, .navbar li a.active{
+           color: red;
+           cursor: pointer;
+        }
+        #kuku{
+            color: coral;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: right;
+            justify-content: right;
+        }
+        section{
+            background-color: antiquewhite;
+        }
+        .table{
+            display: flex;
+            color:green;
+            /* background-color: lightyellow; */
+            font-style: italic;
+            font-weight: bold;
+            font-family: sans-serif;
+         }
+        .table tr td{
+            color: blue;
+        }
+        .box th{
+            color: darkblue;
+        }
+        .box tr{
+            color: whitesmoke;
+        }
+        .box{
+            padding: 30px 22px;
+           margin: 30px 22px;
+           box-shadow: inset 10px 10px  yellow, 25px 25px red;
+           border: 2px dashed ;
+           background-color: mediumaquamarine;
+        }
+        .tinu{
+            color: black;
+            text-align: right;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .menu{
+            display: flex;
+            background-color: cyan;
+            color: red;
+            border: 2px dashed blue;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 20px;
+        }
+        .menu :hover{
+            cursor: text;
+        }
+        .win{
+            text-align: center;
+            font-size: 30px;
+             color: green;
+             background-color: lightskyblue;
+             height: 80px;
+             border-radius: 25px;
+        }
+        .sinu{
+            background-color: burlywood;
+            display: flex;
+            border-radius: 10px
+        }
+    </style>
+</head>
+<body>
+   <header class="header">
+       <h2>MaGiO MaStI</h2>
+   </header>
+   <span>
+       <ul class="navbar">
+           <li><a href="#" target="_self" class="active" > Home </a></li>
+           <li><a href="/Project2/About.html" target="_self"> About us </a></li>
+           <li><a href="/Project2/study.html" target="_self"> Study Material </a></li>
+           <li><a href="/Project2/contact.html" target="_self"> Contact us </a></li>
+           <input type="search box" id="kuku" placeholder="search">
+       </ul>
+    </span>
+   <section>
+   <marquee behavior="" direction="right">
+   <div class="table">
+       <div class="box">
+       <table>
+           <tr>
+               <th>Courses</th>
+               <th>Time</th>
+               <th>Price</th>
+           </tr>
+           <tr>
+               <td style="color: tomato;">C Programming</td>
+               <td>4 months</td>
+               <td style="color: blueviolet;">Rs.4200</td>
+           </tr>
+           <tr>
+               <td>C++</td>
+               <td>5 months</td>
+               <td style=>Rs.5300</td>
+           </tr>
+           <tr>
+               <td style="color: palevioletred;">Html</td>
+               <td>1 month</td>
+               <td>Rs.600</td>
+           </tr>
+           <tr>
+               <td>Js</td>
+               <td>8 months</td>
+               <td style="color:blueviolet;">Rs.7200</td>
+           </tr>
+           <tr>
+               <td style="color: gold;">Css</td>
+               <td>3 months</td>
+               <td>Rs.2200</td>
+           </tr>
+           <tr>
+               <td>Java</td>
+               <td>9 months</td>
+               <td>Rs.10000</td>
+           </tr>
+           <tr>
+               <td style="color: greenyellow;">Phyton</td>
+               <td>12 months</td>
+               <td style="color: blueviolet;">Rs.12000</td>
+           </tr>
+       </table>
+    </marquee>
+    </div>
+    </div>
+        <div class="tinu">
+         Current- Date/Time<br> <span id="time"></span>
+        </div>
+        <br>
+        <div class="aside">
+            <script>
+                console.log("This is date and time ");
+        
+                let dt = new Date(0);
+                console.log(dt);
+        
+               // let newDate = new Date(year , month , date , hours , minutes , seconds ,milliseconds);
+                let newDate = new Date(3020 , 4 , 6 , 9, 45, 22 , 55);
+                console.log(newDate);
+        
+                let yr = newDate.getFullYear();
+                console.log("this year is ", yr);
+        
+                let dat = newDate.getDate();
+                console.log("this date is ", dat);
+        
+                let month = newDate.getMonth();
+                console.log("this month is ", month);
+        
+                let hours = newDate.getHours();
+                console.log("this hours is ", hours);
+        
+                newDate.setDate(16);
+                newDate.setMinutes(59);
+                console.log(newDate);
+                setInterval(updateTime , 1000);
+        
+                function updateTime(){
+                    time.innerHTML = new Date();
+                }
+            </script>
+    </div>
+</section>
+<!-- <?php
+   if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+       $name = $_POST['name'];
+       $email = $_POST['email'];
+       $password = $_POST['pass']
+       echo '<strong>Success!</strong> Your email has been submitted.
+       <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>'
+   }
+?> -->
+    <div class="win">
+   <h1>Register here</h1>
+   </div>
+   
+   <div class="menu">
+       <form  action="connect.php" method="post" >
+        <div>
+            Name: <input type="text" name="name"   placeholder="myName">
+       </div>
+       <br>
+       <div>
+           Email: <input type="email" name="email" placeholder="myEmail">
+        </div>
+        <br>
+        <div>
+           username: <input type="text" name="username" placeholder="myUserName">
+        </div>
+        <br>
+        <div>
+           Password: <input type="password" name="password" placeholder="myPassword" required="Compulsory">
+        </div>
+        <br>
+        <div>
+            confirm password: <input type="password" name="renter" placeholder="myPassword">
+        </div>
+        <br>
+        <div>
+            Phone no: <input type="text" name="phoneno" placeholder="123-456-7890"  maxlength="10">
+        </div>
+        <br>
+        <div>
+            Gender:Male <input type="radio" name="mygender" value="m">Female <input type="radio" name="mygender" value="f">
+        </div>
+        <br>
+        <div>
+          <button type="submit"  name="btn" class="n-primary">Submit</button> 
+        </div>
+       </form>
+   </div>
+   <div class="sinu">
+   <footer>This is a educational page . You can learn here a lot of new things, different courses will be available for you at the cheapest rate . I'm glad to launch this page where all students can get an opportunity to get a scholorship from our side . We will conduct a tast and the student will will secure a good marks will get a chance for 100% scholorship . Here you can select your respective course and according to your scholorship percentage yoy will get discount in your respective courses.</footer>
+   </div>
+<!-- <script>
+   function required()
+{
+var empt = document.forms["text1"].value;
+if (empt == "")
+{
+alert("Please input a Value");
+return false;
+}
+else 
+{
+alert('Code has accepted : you can try another');
+return true; 
+}
+}
+
+   </script> -->
+</body>
+</html>
+<!-- <?php
+$name = $_POST['name'];
+$email = $_POST['email'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$renter = $_POST['renter'];
+$phoneno = $_POST['phoneno'];
+$gender = $_POST['gender'];
+
+
+//Database connection
+$conn = new mysqli('localhost','root','','test');
+if($conn->connect_error){
+    die('Connection Failed   : ' .$conn->connect_error);
+}
+    else{
+        $stmt = $conn->prepare("insert into registration(name, email, username, password, renter, phoneno, gender)values(?,?,?,?,?,?,?)");
+        $stmt->bind_param("sssssi",$name, $email, $username, $password, $renter, $phoneno, $gender);
+        $stmt->execute();
+        echo "registration successful...";
+        $stmt->close();
+        $conn->close();
+    }
+
+?> -->
